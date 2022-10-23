@@ -11,6 +11,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const gulppug = require("gulp-pug");
 const sourcemaps = require("gulp-sourcemaps");
+const ghPages = require("gulp-gh-pages");
 
 // /*
 // TOP LEVEL FUNCTIONS
@@ -106,6 +107,8 @@ function watch_files() {
   // gulp.watch("src/*.html", nunjucks).on("change", browserSync.reload);
   gulp.watch("src/**/*.pug", pug).on("change", browserSync.reload);
 }
+
+gulp.task("deploy", () => src("./dist/**/*").pipe(ghPages()));
 
 // Default 'gulp' command with start local server and watch files for changes.
 exports.default = series(pug, css, js, imageMin, watch_files);
