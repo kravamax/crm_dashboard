@@ -99,7 +99,7 @@ function watch_files() {
   gulp.watch("src/**/*.pug", pug).on("change", browserSync.reload);
 }
 
-gulp.task("deploy", () => src("./dist/**/*").pipe(ghPages()));
+gulp.task("deploy", () => src("./docs/**/*").pipe(ghPages()));
 
 // Default 'gulp' command with start local server and watch files for changes.
 exports.default = series(pug, css, js, imageMin, minifyHTML, watch_files);
