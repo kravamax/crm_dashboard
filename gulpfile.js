@@ -15,27 +15,27 @@ const ghPages = require("gulp-gh-pages");
 
 // Optimise Images
 function imageMin(cb) {
-  gulp.src("src/images/**/*").pipe(imagemin()).pipe(gulp.dest("dist/images"));
+  gulp.src("src/images/**/*").pipe(imagemin()).pipe(gulp.dest("docs/images"));
   cb();
 }
 
-// Copy all HTML files to Dist
+// Copy all HTML files to docs
 function copyHTML(cb) {
-  gulp.src("src/*.html").pipe(gulp.dest("dist"));
+  gulp.src("src/*.html").pipe(gulp.dest("docs"));
   cb();
 }
 
 // Minify HTML
 function minifyHTML(cb) {
   gulp
-    .src("dist/*.html")
-    .pipe(gulp.dest("dist"))
+    .src("docs/*.html")
+    .pipe(gulp.dest("docs"))
     .pipe(
       htmlmin({
         collapseWhitespace: true,
       })
     )
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
   cb();
 }
 
@@ -44,7 +44,7 @@ function pug(cb) {
   gulp
     .src("src/**/*.pug")
     .pipe(gulppug({ pretty: true }))
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 
   cb();
 }
@@ -60,7 +60,7 @@ function js(cb) {
     )
     .pipe(concat("main.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("dist/js"));
+    .pipe(gulp.dest("docs/js"));
   cb();
 }
 
@@ -76,13 +76,13 @@ function css(cb) {
         cascade: false,
       })
     )
-    .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest("docs/css"))
     // Stream changes to all browsers
     .pipe(browserSync.stream())
-    .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(browserSync.reload({ stream: true }))
     .pipe(sourcemaps.write("../maps"))
-    .pipe(gulp.dest("dist/css"));
+    .pipe(gulp.dest("docs/css"));
   cb();
 }
 
@@ -90,7 +90,7 @@ function css(cb) {
 function watch_files() {
   browserSync.init({
     server: {
-      baseDir: "dist/",
+      baseDir: "docs/",
     },
   });
 
@@ -99,7 +99,7 @@ function watch_files() {
   gulp.watch("src/**/*.pug", pug).on("change", browserSync.reload);
 }
 
-gulp.task("deploy", () => src("./dist/**/*").pipe(ghPages()));
+gulp.task("deploy", () => src("./docs/**/*").pipe(ghPages()));
 
 // Default 'gulp' command with start local server and watch files for changes.
 exports.default = series(pug, css, js, imageMin, minifyHTML, watch_files);

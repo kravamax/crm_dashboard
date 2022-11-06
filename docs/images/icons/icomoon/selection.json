@@ -1,0 +1,136 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M458.735 719.377v86.613c0 73.387-68.268 132.693-152.321 132.693s-152.748-59.307-152.748-132.693v-86.613c0 73.387 68.268 125.44 152.748 125.44 84.053 0 152.321-52.48 152.321-125.44z",
+          "M458.671 602.027c0 21.333-5.973 40.96-16.213 58.027-25.175 41.387-76.803 67.413-136.536 67.413s-111.36-26.453-136.534-67.413c-10.24-17.067-16.211-36.693-16.211-58.027 0-36.693 17.066-69.547 44.372-93.44 27.733-24.32 65.705-38.827 107.945-38.827s80.215 14.933 107.948 38.827c28.162 23.467 45.228 56.747 45.228 93.44z",
+          "M458.735 602.027v117.333c0 73.387-68.268 125.44-152.321 125.44s-152.748-52.48-152.748-125.44v-117.333c0-73.387 68.268-132.693 152.748-132.693 42.24 0 80.215 14.933 107.948 38.827 27.306 23.893 44.373 57.173 44.373 93.867z",
+          "M938.667 468.049v87.898c0 23.467-18.773 42.662-42.667 43.516h-83.631c-46.080 0-88.316-33.707-92.156-79.787-2.56-26.88 7.676-52.053 25.596-69.547 15.787-16.213 37.551-25.598 61.444-25.598h88.747c23.893 0.853 42.667 20.051 42.667 43.518z",
+          "M85.333 448v-85.333c0-116.053 69.973-197.12 178.773-210.773 11.093-1.707 22.613-2.56 34.56-2.56h384c11.093 0 21.76 0.426 32 2.133 110.080 12.8 181.333 94.294 181.333 211.2v61.867h-88.747c-23.893 0-45.653 9.386-61.44 25.6-17.92 17.493-28.16 42.667-25.6 69.547 3.84 46.080 46.080 79.787 92.16 79.787h83.627v61.867c0 128-85.333 213.333-213.333 213.333h-106.667"
+        ],
+        "attrs": [
+          {
+            "fill": "none",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 64
+          },
+          {
+            "fill": "none",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 64
+          },
+          {
+            "fill": "none",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 64
+          },
+          {
+            "fill": "none",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 64
+          },
+          {
+            "fill": "none",
+            "strokeLinejoin": "round",
+            "strokeLinecap": "round",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 64
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "income"
+        ],
+        "grid": 0
+      },
+      "attrs": [
+        {
+          "fill": "none",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 64
+        },
+        {
+          "fill": "none",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 64
+        },
+        {
+          "fill": "none",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 64
+        },
+        {
+          "fill": "none",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 64
+        },
+        {
+          "fill": "none",
+          "strokeLinejoin": "round",
+          "strokeLinecap": "round",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 64
+        }
+      ],
+      "properties": {
+        "order": 22,
+        "id": 0,
+        "name": "income",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 11,
+      "iconIdx": 0
+    }
+  ],
+  "height": 1024,
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "name": "icomoon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}
