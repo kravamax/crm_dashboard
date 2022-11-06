@@ -1,0 +1,55 @@
+include mixinStatus
+include data-table
+
+main.main
+    h2.main__title Hello Evano👋🏼,
+    .product 
+        .product__header 
+            .product__title-container
+                .product__title All Customers
+                .product__description Active Members
+            .product__search-container
+                input(class='product__search-input' type="search" name="search-input" placeholder='Search')
+                button.product__search-button
+        table.table
+            thead.thead
+                tr.thead__row
+                    th.thead__cell Customer Name
+                    th.thead__cell Company
+                    th.thead__cell Phone Number
+                    th.thead__cell Email
+                    th.thead__cell Country
+                    th.thead__cell Status
+            tbody.tbody
+                each tableRow in dataTable
+                    tr.tbody__row 
+                        each tableCellValue, tableCellKey in tableRow
+                            if(tableCellKey == 'Status')
+                                +status(tableCellValue, tableCellKey)
+                            else 
+                                td.tbody__cell(data-label=`${tableCellKey}`) #{tableCellValue}
+
+        .pagination-container 
+            p.pagination-info Showing data 1 to 8 of  256K entries                 
+            nav(aria-label='Page navigation example').pagination
+                ul.pagination__list
+                    li.pagination__item
+                        a.pagination__link(href='#' tabindex='-1').pagination__arrow
+                            svg(width='5' height='7' viewbox='0 0 5 7' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M2.936 6.392L0.176 3.668L2.936 0.944H4.664L1.892 3.668L4.664 6.392H2.936Z')
+                    li.pagination__item
+                        a.pagination__link(href='#').pagination__link--active 1
+                    li.pagination__item
+                        a.pagination__link(href='#') 2
+                    li.pagination__item
+                        a.pagination__link(href='#') 3
+                    li.pagination__item
+                        a.pagination__link(href='#') 4
+                    li
+                        .pagination__item--dots ...
+                    li.pagination__item
+                        a.pagination__link(href='#') 40
+                    li.pagination__item
+                        a.pagination__link(href='#').pagination__arrow
+                            svg(width='5' height='7' viewbox='0 0 5 7' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M0.344 0.944H2.072L4.832 3.668L2.072 6.392H0.344L3.116 3.668L0.344 0.944Z')

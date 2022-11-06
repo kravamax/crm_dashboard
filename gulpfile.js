@@ -13,17 +13,9 @@ const gulppug = require("gulp-pug");
 const sourcemaps = require("gulp-sourcemaps");
 const ghPages = require("gulp-gh-pages");
 
-// /*
-// TOP LEVEL FUNCTIONS
-//     gulp.task = Define tasks
-//     gulp.src = Point to files to use
-//     gulp.dest = Points to the folder to output
-//     gulp.watch = Watch files and folders for changes
-// */
-
 // Optimise Images
 function imageMin(cb) {
-  gulp.src("src/images/*").pipe(imagemin()).pipe(gulp.dest("dist/images"));
+  gulp.src("src/images/**/*").pipe(imagemin()).pipe(gulp.dest("dist/images"));
   cb();
 }
 
@@ -36,7 +28,7 @@ function copyHTML(cb) {
 // Minify HTML
 function minifyHTML(cb) {
   gulp
-    .src("src/*.html")
+    .src("dist/*.html")
     .pipe(gulp.dest("dist"))
     .pipe(
       htmlmin({
@@ -50,7 +42,7 @@ function minifyHTML(cb) {
 // PUG
 function pug(cb) {
   gulp
-    .src("src/*.pug")
+    .src("src/**/*.pug")
     .pipe(gulppug({ pretty: true }))
     .pipe(gulp.dest("dist"));
 
@@ -104,14 +96,13 @@ function watch_files() {
 
   gulp.watch("src/sass/**/*.scss", css).on("change", browserSync.reload);
   gulp.watch("src/js/*.js", js).on("change", browserSync.reload);
-  // gulp.watch("src/*.html", nunjucks).on("change", browserSync.reload);
   gulp.watch("src/**/*.pug", pug).on("change", browserSync.reload);
 }
 
 gulp.task("deploy", () => src("./dist/**/*").pipe(ghPages()));
 
 // Default 'gulp' command with start local server and watch files for changes.
-exports.default = series(pug, css, js, imageMin, watch_files);
+exports.default = series(pug, css, js, imageMin, minifyHTML, watch_files);
 
 // 'gulp build' will build all assets but not run on a local server.
-exports.build = parallel(pug, css, js, imageMin);
+exports.build = parallel(pug, css, js, imageMin, minifyHTML);

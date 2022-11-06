@@ -1,0 +1,95 @@
+.nav {
+  width: 306px;
+  padding-top: 139px;
+  padding-left: 28px;
+  padding-bottom: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #fff;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__item {
+    display: flex;
+
+    &__link--active {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    width: 250px;
+    padding: 11px;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: $font-weight-medium;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    color: $color-nav-text;
+
+    img {
+      order: -1;
+      margin-right: 14px;
+    }
+
+    &:hover {
+      padding: 11px;
+
+      background-color: $color-nav-accent-bg;
+      border-radius: 8px;
+      color: $color-white;
+    }
+  }
+
+  &__link--active {
+    position: relative;
+
+    background-color: $color-nav-accent-bg;
+    border-radius: 8px;
+    color: $color-white;
+  }
+
+  .arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../images/icons/arrow.svg");
+      position: absolute;
+      right: 8px;
+    }
+  }
+
+  &__user {
+    display: flex;
+
+    .user__block {
+      margin-left: 12px;
+    }
+
+    .user__name {
+      font-weight: $font-weight-medium;
+      letter-spacing: 0.01em;
+    }
+
+    .user__position {
+      font-weight: $font-weight-small;
+      font-size: 12px;
+
+      letter-spacing: 0.01em;
+
+      color: #757575;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+
+<main class="main">
+  <h2 class="main__title">Hello Evano👋🏼,</h2>
+  <div class="product"> 
+    <div class="product__header"> 
+      <div class="product__title-container">
+        <div class="product__title">All Customers</div>
+        <div class="product__description">Active Members</div>
+      </div>
+      <div class="product__search-container">
+        <input class="product__search-input" type="search" name="search-input" placeholder="Search"/>
+        <button class="product__search-button"></button>
+      </div>
+    </div>
+    <table class="table">
+      <thead class="thead">
+        <tr class="thead__row">
+          <th class="thead__cell">Customer Name</th>
+          <th class="thead__cell">Company</th>
+          <th class="thead__cell">Phone Number</th>
+          <th class="thead__cell">Email</th>
+          <th class="thead__cell">Country</th>
+          <th class="thead__cell">Status</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Jane Cooper</td>
+          <td class="tbody__cell" data-label="Company">Microsoft</td>
+          <td class="tbody__cell" data-label="Phone number">(225) 555-0118</td>
+          <td class="tbody__cell" data-label="Email">jane@microsoft.com</td>
+          <td class="tbody__cell" data-label="Country">United States</td>
+          <td class="tbody__cell tbody__cell--active" data-label="Status">Active</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Floyd Miles</td>
+          <td class="tbody__cell" data-label="Company">Yahoo</td>
+          <td class="tbody__cell" data-label="Phone number">(205) 555-0100</td>
+          <td class="tbody__cell" data-label="Email">floyd@yahoo.com</td>
+          <td class="tbody__cell" data-label="Country">Kiribati</td>
+          <td class="tbody__cell tbody__cell--inactive" data-label="Status">Inactive</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Ronald Richards</td>
+          <td class="tbody__cell" data-label="Company">Adobe</td>
+          <td class="tbody__cell" data-label="Phone number">(302) 555-0107</td>
+          <td class="tbody__cell" data-label="Email">ronald@adobe.com</td>
+          <td class="tbody__cell" data-label="Country">Israel</td>
+          <td class="tbody__cell tbody__cell--inactive" data-label="Status">Inactive</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Marvin McKinney</td>
+          <td class="tbody__cell" data-label="Company">Tesla</td>
+          <td class="tbody__cell" data-label="Phone number">(252) 555-0126</td>
+          <td class="tbody__cell" data-label="Email">marvin@tesla.com</td>
+          <td class="tbody__cell" data-label="Country">Iran</td>
+          <td class="tbody__cell tbody__cell--active" data-label="Status">Active</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Jerome Bell</td>
+          <td class="tbody__cell" data-label="Company">Google</td>
+          <td class="tbody__cell" data-label="Phone number">(629) 555-0129</td>
+          <td class="tbody__cell" data-label="Email">jerome@google.com</td>
+          <td class="tbody__cell" data-label="Country">Réunion</td>
+          <td class="tbody__cell tbody__cell--active" data-label="Status">Active</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Kathryn Murphy</td>
+          <td class="tbody__cell" data-label="Company">Microsoft</td>
+          <td class="tbody__cell" data-label="Phone number">(406) 555-0120</td>
+          <td class="tbody__cell" data-label="Email">kathryn@microsoft.com</td>
+          <td class="tbody__cell" data-label="Country">Curaçao</td>
+          <td class="tbody__cell tbody__cell--active" data-label="Status">Active</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Jacob Jones</td>
+          <td class="tbody__cell" data-label="Company">Yahoo</td>
+          <td class="tbody__cell" data-label="Phone number">(208) 555-0112</td>
+          <td class="tbody__cell" data-label="Email">jacob@yahoo.com</td>
+          <td class="tbody__cell" data-label="Country">Brazil</td>
+          <td class="tbody__cell tbody__cell--active" data-label="Status">Active</td>
+        </tr>
+        <tr class="tbody__row"> 
+          <td class="tbody__cell" data-label="Customer Name">Kristin Watson</td>
+          <td class="tbody__cell" data-label="Company">Facebook</td>
+          <td class="tbody__cell" data-label="Phone number">(704) 555-0127</td>
+          <td class="tbody__cell" data-label="Email">kristin@facebook.com</td>
+          <td class="tbody__cell" data-label="Country">Åland Islands</td>
+          <td class="tbody__cell tbody__cell--inactive" data-label="Status">Inactive</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination-container"> 
+      <p class="pagination-info">Showing data 1 to 8 of  256K entries                 </p>
+      <nav class="pagination" aria-label="Page navigation example">
+        <ul class="pagination__list">
+          <li class="pagination__item"><a class="pagination__link pagination__arrow" href="#" tabindex="-1">
+              <svg width="5" height="7" viewbox="0 0 5 7" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.936 6.392L0.176 3.668L2.936 0.944H4.664L1.892 3.668L4.664 6.392H2.936Z"></path>
+              </svg></a></li>
+          <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+          <li>
+            <div class="pagination__item--dots">...</div>
+          </li>
+          <li class="pagination__item"><a class="pagination__link" href="#">40</a></li>
+          <li class="pagination__item"><a class="pagination__link pagination__arrow" href="#">
+              <svg width="5" height="7" viewbox="0 0 5 7" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.344 0.944H2.072L4.832 3.668L2.072 6.392H0.344L3.116 3.668L0.344 0.944Z"></path>
+              </svg></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>

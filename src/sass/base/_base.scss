@@ -1,0 +1,33 @@
+/*------------------*
+# Base
+*------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  background-color: $color-main-bg;
+}
+
+.container {
+  max-width: $page-main-size;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  position: relative;
+
+  @media screen and (max-width: $page-main-size-laptop) {
+    max-width: $page-main-size-laptop;
+    display: block;
+  }
+}

@@ -1,0 +1,5 @@
+mixin status(name, key)
+        if(name)
+            td(data-label=`${key}` class='tbody__cell tbody__cell--' + 'active' ) Active
+        else
+            td(data-label=`${key}` class='tbody__cell tbody__cell--' + 'inactive') Inactive
