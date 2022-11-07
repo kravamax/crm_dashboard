@@ -7,3 +7,9 @@ Figma: https://www.figma.com/file/Rya0Q6tjdeQA9iQe4BlGHl/CRM-Dashboard-Customers
 - BEM
 - Pixel Perfect
 - Mobile/Tablet/Desktop version
+
+🛠️ What I use :
+- GULP
+- PUG
+- SASS
+- JS
